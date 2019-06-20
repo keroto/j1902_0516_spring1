@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--添加依赖方-->
+    <bean id="deptService" class="com.qf.j1902.service.impl.DeptServiceImpl">
+        <property name="deptDao" ref="deptDao"/>
+    </bean>
+    <!--添加被依赖方-->
+    <bean id="deptDao" class="com.qf.j1902.dao.impl.DeptDaoImpl"></bean>
+</beans>
